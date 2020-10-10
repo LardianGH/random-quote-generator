@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#numGen { 
+    background-color: aqua;
+    width: 80px;
+    border: solid;
+    border-color: red;
+    margin-left: 50%;
+    margin-right: auto;
+}
+</style>
+<body>
+    <button id="numGen" onclick="chooseQuote()">Generate quote</button>
+
+</body>
+<script>
+    const quoteArray = ["I like cheese","I dont like cheese","Dragons without wings are called wyverns, thus skyrim has no dragons in it","Anyone tried the new Occulus Quest 2 yet?"]
+    function chooseQuote() {
+        const number = Math.floor(Math.random() * quoteArray.length)
+        const chosenquote = quoteArray[number]
+        console.log("quoteArray: " + quoteArray.length)
+        console.log("Number: " + number)
+        console.log("chosenquote: " + chosenquote)
+        alert("Quote: " + chosenquote)
+    };
+    //chooseQuote()
+</script>
+</html>
